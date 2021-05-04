@@ -1,0 +1,152 @@
+<h1 style="margin-left: 30%;">ng-content,ng-container,ng-template Eg.</h1>
+
+<!-- <a href="new-component">New Component</a> -->
+<div id="simple">
+    <br>
+    <div *ngIf="array.length > 0">
+        <div *ngFor="let item of array">
+            <div *ngIf="item">{{item.name}}</div>  
+        </div>
+    </div>
+    <ng-template [ngIf]="home">GO home</ng-template>
+</div>
+
+<div id="tmplate" style="margin-bottom: 5px;">
+    <div id="ngtmplate">
+        <h1 style="font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;background-color: darkcyan;">ng-template</h1>
+        <!-- ng-template will not take space in dom while div will -->
+        <ng-template *ngIf="array1.length>0 ;else noData">
+            <ng-template *ngFor="let item of array1">{{item.name}}</ng-template>
+        </ng-template>
+
+        <ng-template #noData>No Data</ng-template>
+    </div>
+    <div id="ngtemplate1" style="background-color: aquamarine;">
+        <span style="background-color: aquamarine;">
+            It is used with Structural directives like ngIf,ngFor etc.
+            It comments out all the that is written within ngTemplate and displays comment in the DOM.
+            It does not take space in DOM. 
+        </span>
+        <p>In this example there is an empty array used so if data is not there than it will show no data Using ngIf/else</p>
+    </div>
+</div>
+
+<!-- ng-container -->
+<div id="container">
+    <div id="ngcntainer">
+        <h2 style="background-color: aqua;">ng-container</h2>
+        <ng-container *ngFor="let item of array">
+            <div *ngIf="item.id">{{item.name}}</div>
+        </ng-container>
+    </div>
+    <div id="ngcntainer2">
+        <p>ngContainer is used if you want to add more than one structural directive, so that we don't have to add any extra element in the DOM</p>
+        <p>We have displayed elements who have id.
+            
+        </p>
+    </div>
+</div>
+
+<!-- ng-content -->
+<div id="content-container">
+    <div id="content">
+        <div id="ngcntent">
+            <h2 style="background-color: cadetblue;">ng-content</h2>
+        </div>
+        <div>
+            <!-- <h2>Header</h2> -->
+            <app-new-component></app-new-component>
+        </div>
+        <div>
+            <!-- <div>Body</div> -->
+            <app-new-component> 
+                <div>This is Footer</div>
+            </app-new-component>
+        </div>
+        <div>
+            <app-new-component> 
+                <div>Footer</div>
+            </app-new-component>
+        </div>
+    </div>
+    <div id="content2">
+        <p>ngContent is used if you want to reuse any template in other template.Here
+           we are using the footer template from other component. 
+           The component can be configured according to the need.
+        </p>
+    </div>
+</div>
+<!-- <app-content>
+    <div>this is footer</div>
+</app-content> -->
+<!-- ng-content multiple projections -->
+<!-- <new-content>
+    <h1>Multiple</h1>
+    <h2>Projections</h2>
+    <div>this is footer</div>
+    <p>alfkfnwfnk</p>
+</new-content> -->
+
+<!-- ngTemplateOutlet -->
+<div id="templateOutletContainer">
+    <div id="tmplateOutlet">
+        <div id="ngtmplateoutlet">
+            <h2 style="background-color: cornflowerblue;">ngTemplateOutlet</h2>
+        <div>
+            <h1>Hello welcome</h1>
+            <ng-container *ngTemplateOutlet="name"></ng-container>
+        </div>
+        <div>
+            <h2>Good morning</h2>
+            <ng-container *ngTemplateOutlet="name"></ng-container>
+        </div>
+        <ng-template #name>
+            <div>
+                <p style="background-color: greenyellow;">cmk</p>
+            </div>
+        </ng-template>
+        </div>
+    </div>
+    <div id="tmplateOutlet2">
+        <p>ngTemplateOutlet works when you want to reuse any template.Using reference to that template.
+            The name "cmk" is declared in other template and is reused here.You can use it in multiple template.
+        </p>
+    </div>
+</div>
+
+<!-- ngTemplateOutlet with customizable component -->
+<!-- <div id="ngtmplateoutlet2">
+    <h2>ngTemplateOutlet</h2>
+<div>
+    <h1>Hello welcome</h1>
+    <ng-container *ngTemplateOutlet="name?name:defaultName"></ng-container>
+</div>
+<ng-template #defaultName>
+    <div>
+        <p>amk</p>
+    </div>
+</ng-template> -->
+<div id="cstmTmplateOutletContainer">
+    <div id="cstmTmplateOutlet">
+        <div>
+            <h2>Good morning</h2>
+            <ng-container *ngTemplateOutlet="name1?name1:defaultName1"></ng-container>
+        </div>
+        <!-- <ng-template #name1>
+            <div>
+                <p>kkkk</p>
+            </div>
+        </ng-template> -->
+        
+        <ng-template #defaultName1>
+            <div>
+                <p style="background-color: greenyellow;">mvk</p>
+            </div>
+        </ng-template>
+    </div>
+    <div id="cstmTmplateOutlet2">
+        <p>We can display default template also using ngTemplateOutlet, if the template is not there then we can define default template and use it.</p>
+    </div>
+</div>
+    
+<router-outlet></router-outlet>

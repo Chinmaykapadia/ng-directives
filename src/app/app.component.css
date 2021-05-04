@@ -1,0 +1,128 @@
+#simple{
+    /* border: 2px solid; */
+    width: 200px;
+    margin-top: 5px;
+    margin-left: 100px;
+}
+#tmplate{
+    margin-top: 5px;
+    margin-bottom: 5px;
+    border: 2px solid;
+    height: 130px;
+}
+#ngtmplate{
+    /* border: 2px solid; */
+    width: 200px;
+    margin-top: 5px;
+    margin-left: 100px;
+    float:left;
+    background-color: antiquewhite;
+}
+#ngtemplate1{
+    float: right;
+    margin-right: 30%;
+    border: 2px solid;
+    width: 700px;
+    margin-top: 20px;
+}
+#container{
+    margin-top: 5px;
+    margin-bottom: 5px;
+    border: 2px solid;
+    height: 130px;
+}
+#ngcntainer{
+    /* border: 2px solid; */
+    width: 200px;
+    margin-top: 5px;
+    margin-left: 100px;
+    float:left;
+    background-color: antiquewhite;
+    /* float:right; */
+}
+#ngcntainer2{
+    float: right;
+    margin-right: 30%;
+    border: 2px solid;
+    width: 700px;
+    margin-top: 10px;
+    background-color: bisque;
+    /* margin-top: 50px; */
+}
+#content-container{
+    margin-top: 5px;
+    margin-bottom: 5px;
+    border: 2px solid;
+    height: 500px;
+}
+#content{
+    /* border: 2px solid; */
+    width: 200px;
+    margin-top: 5px;
+    margin-left: 100px;
+    float:left;
+    background-color: antiquewhite;
+    /* height: 800px; */
+}
+#content2{
+    float: right;
+    margin-right: 30%;
+    border: 2px solid;
+    width: 700px;
+    margin-top: 10px;
+    background-color: bisque;
+}
+#templateOutletContainer{
+    margin-top: 5px;
+    margin-bottom: 5px;
+    border: 2px solid;
+    height: 270px;
+}
+#tmplateOutlet{
+    width: 200px;
+    margin-top: 5px;
+    margin-left: 90px;
+    float:left;
+    background-color: antiquewhite;
+}
+#ngtmplateoutlet{
+    /* border: 2px solid; */
+    width: 200px;
+    margin-top: 5px;
+    /* margin-left: 10px; */
+}
+#tmplateOutlet2{
+    float: right;
+    margin-right: 30%;
+    border: 2px solid;
+    width: 700px;
+    margin-top: 60px;
+    background-color: bisque;
+}
+#ngtmplateoutlet2{
+    border: 2px solid;
+    width: 200px;
+    margin-top: 5px;
+    margin-left: 100px;
+}
+#cstmTmplateOutletContainer{
+    margin-top: 5px;
+    margin-bottom: 5px;
+    border: 2px solid;
+    height: 130px;
+}
+#cstmTmplateOutlet{
+    width: 200px;
+    margin-top: 5px;
+    margin-left: 90px;
+    float:left;
+    background-color: antiquewhite;
+}
+#cstmTmplateOutlet2{
+    float: right;
+    margin-right: 30%;
+    border: 2px solid;
+    width: 700px;
+    margin-top: 20px;
+    background-color: bisque;
+}
